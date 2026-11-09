@@ -1,0 +1,26 @@
+
+{
+  "name": "sweety-healthcare-saas",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Sweety - Smart Blood Glucose Tracker and Health Analytics Platform",
+  "type": "module",
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace=server",
+    "dev:client": "npm run dev --workspace=client",
+    "dev:server": "npm run dev --workspace=server",
+    "test:backend": "npm run test --workspace=server",
+    "test:frontend": "npm run test --workspace=client",
+    "test:all": "npm run test:backend && npm run test:frontend && npm run build",
+    "build": "npm run build --workspace=client",
+    "test": "npm run test:all",
+    "lint": "npm run lint --workspaces --if-present"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
